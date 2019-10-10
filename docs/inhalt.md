@@ -17,8 +17,8 @@
 ### Bereitstellungsmodelle
 #### Public Cloud
 #### Private Cloud
-#### Hybrid CLoud
-###Security
+#### Hybrid Cloud
+### Security
 ## DevOps
 ## Microservices
 ### Service Orientated Architecture
