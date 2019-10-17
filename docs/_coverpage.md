@@ -1,6 +1,8 @@
 # Cloud Computing
 ## FH Bielefeld, Campus Minden, WS19/20
 
+![](./coverpage.jpg)
+
 ---
 
 Ausarbeitung von:
