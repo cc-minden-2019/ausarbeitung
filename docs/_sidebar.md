@@ -18,6 +18,7 @@
 - [Vor-/Nachteile, Vendor-Lock-In](cloud-computing/vor_nachteile.md)
 
 - Microservices
-- [Architektur (EDA, ES, CQRS, SOA)](microservices/architektur.md)
+- [Microservices](microservices/microservices.md)
+- [Architektur (EDA, ES, CQRS)](microservices/architektur.md)
 - [Scale Cube](microservices/scale_cube.md)
 - [Vorteile / Nachteile](microservices/vor_nachteile.md)
