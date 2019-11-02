@@ -113,5 +113,146 @@ Bei langer Entwicklung einer Microservice-Architektur kann durch das Wachsen die
 
 ---
 
+# Architektur von Microservices
+
+## Größe von Microservices
+
+Die Größe eines Microservices kann durch folgende Faktoren beeinflusst und bestimmt werden:
+
+### Modularisierung
+
+Services mit einer hohen Kohäsion erlauben Wiederverwendung und sind einfach zu warten und von weiteren Entwicklern weiterzuentwickeln, da die vollständige Funktionalität eines Microservices schnell zu erfassen ist. Das spricht für kleine Microservices.
+
+### Verteilte Netzwerkkommunikation
+
+Microservices kommunizieren verteilt über ein Netzwerk. Netzwerkkommunikation ist grundsätzlich problematisch, da Netzwerkaufrufe deutlich langsamer (Latenz, (De)serialisierung) als Aufrufe innerhalb des selben Prozesses sind. Außerdem können verteilte Aufrufe fehlschlagen, weil das Netzwerk oder ein Service nicht verfügbar sein kann. Der Aufrufer muss diese Fehlerfälle sorgfältig behandeln. Da kleinere Services zu mehr Netzwerkkommunikation führen, spricht das für große Microservices.
+
+### Teamgröße
+
+Zur vollen Ausschöpfung der Vorteile einer Microservice-basierten Architektur sollten Teams in agilen Prozessen arbeiten können. Dafür empfiehlt sich eine Teamgröße von 3-9 Personen. Ein Microservice ist in seiner Größe also dadurch begrenzt, dass er von einem solchen Team entwickelt und gewartet werden kann. Das spricht für kleine Microservices.
+
+### Infrastruktur
+
+Um eine unabhängige und isolierte Bereitstellung eines Microservices zu ermöglichen ist eine Infrastruktur mit Continious-Integration und -Deployment notwendig. Kleine Microservices führen zu einer hohen Anzahl von Microservices was einen großen infrastrukturellen Aufwand bedeutet. Das spricht für große Microservices.
+
+### Austauschbarkeit
+
+Große Microservices sind nur schwer auszutauschen, da eine Neuimplementierung mit einem hohen Aufwand verbunden ist. Das spricht für kleine Microservices.
+
+### Transaktionen und Konsistenz
+
+Transaktionen können nicht über mehrere Microservices hinweg sichergestellt werden. Dies würde externe Koordination erfordern, was die Kopplung erhöht und die Isolation schwächt. Grundsätzlich sind Transaktionen also nur innerhalb eines Microservices möglich.
+
+Konsistenz ist über mehrere Microservices ebenfalls schwer zu garantieren. Da asynchroner Netzwerkverkehr zu verzögerten Datenänderungen und somit temporärer Inkonsistenz führt. Das spricht für große Microservices.
+
+![](images/wolff/s34_size_limitations.png)
+
+*Abbildung 8: Einflussfaktoren auf die Größe von Microservices [Wolff, S. 34]*
+
+<div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
+
+- Obere Größenbegrenzungen: Teamgröße, Modularisierung, Austauschbarkeit
+- Untere Größenbegrenzungen: Transaktionen und Konsistenz, Infrastruktur, Verteilte Kommunikation
+
+</div>
+
+## CQRS
+
+### Command-Query-Seperation (CQS)
+
+**Command-Query-Seperation (CQS)** beschreibt die Unterscheidung von Befehlen (Commands), die schreibenden Einfluss auf Daten haben können und Querys (Abfragen), die ihr Resultat liefern, ohne einen Seiteneffekt zu haben. Also lesend auf Daten zugreifen.
+
+```java
+class Foo {
+	void command(); // Darf Daten ändern
+	Result query(); // Readonly
+}
+```
+
+*Listing 1: Abstraktes Schema von CQS auf Ebene einer objektorientierten Klasse*
+
+<div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
+
+- CQS: Trennung von Commands und Querys
+
+</div>
+
+### Command-Query-Responsibility-Segregation (CQRS)
+
+**Command-Query-Responsibility-Segregation (CQRS)** beschreibt das Anwenden des CQS-Prinzip (Scope: Klasse) auf den Scope eines Bounded Contexts.
+
+![](images/wolf/s17_default_architecture.png)
+
+*Abbildung 9: Klassisches Architekturschema nach DDD [Wolf, Folie 17]*
+
+Die Anwendung von CQRS sorgt für eine Aufteilung nach Command-Services und Query-Services.
+
+![](images/wolf/s27_cqrs_architecture.png)
+
+*Abbildung 10: DDD-Architekturschema nach Anwendung von CQRS [Wolf, Folie 27]*
+
+Es kann hierbei zahlreiche Command- oder Query-Microservices mit einer hohen Kohäsion geben. Dies führt zu kleinen Microservices.
+
+<div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
+
+- CQRS: Anwenden von CQS auf Bounded Context
+- Aufteilung in Command-/Query-Services
+
+</div>
+
+Bei asymmetrischer Last kann außerdem skaliert werden. Häufig finden sich auf Query-Seite mehr Anfragen. Nun kann diese einfach horizontal skaliert werden. Weiterhin ist bei einer Aufteilung in unterschiedliche Query-Services eine sehr granulare Skalierung von zum Beispiel eines einzelnen Services möglich.
+
+![](images/wolf/s28_cqrs_asymmetric_scaling.png)
+
+*Abbildung 11: CQRS macht asymmetrisches Skalieren möglich [Wolf, Folie 28]*
+
+CQRS kann auch auf das Domänenmodell dahingehend angewendet werden, dass dieses in ein spezialisiertes Command- und Query-Model aufgeteilt wird. Das Query-Modell kann hierbei durch zum Beispiel denormalisierte Daten oder spezielle Views auf große Anfragemengen optimiert werden.
+
+![](images/wolf/s30_cqrs_specialist_model.png)
+
+*Abbildung 12: CQRS erlaubt das Aufteilen des Domänenmodells [Wolf, Folie 30]*
+
+Da sich durch Command-Query-Responsibility-Segregation üblicherweise die Anzahl der Microservices erhöht treten vermehrt Konsistenz- und Transaktions-Probleme auf. Gerade in Fällen, in denen Transaktionen Read- und Write-Operationen beinhalten kann wieder ein Zusammenlegen eines Services Sinn ergeben. Ein solcher Service, der die abzufragenden Daten auch ändert behält gewissermaßen seine Kohäsion.
+
+<div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
+
+- CQRS ermöglicht asymmetrisches, granulares Skalieren
+- CQRS erlaubt Aufteilung in spezialisierte Modelle
+- Transaktionen sind vestärkt ein Problem
+
+</div>
+
+## Event Sourcing (ES)
+
+**Event Sourcing (ES)** beschreibt das Vorgehen, anstatt eines Zustands alle Ereignisse zu speichern, die zu diesem Zustand geführt haben. Ein Ereignis oder Event ist dabei eine Repräsentation davon, wann eine Aktion stattfand. Diese sind offensichtlicher Weise immutable, da die Vergangenheit nicht geändert werden kann und das von dem Modell wiedergespiegelt werden sollte. Events, die zu einem Error geführt haben, müssen also durch neue Events korregiert werden und dürfen nicht verändert werden.
+
+Event Sourcing ermöglicht es, den State einer Anwendung zu jedem Zeitpunkt herzustellen. Hierzu müssen lediglich alle Events bis zu diesem angewendet werden. Weiterhin gehen keine Rohdaten verloren, die in Zukunft möglicherweise von einem neuen Algorithmus benötigt werden könnten.
+
+Die Komplexität erhöht sich, wenn die Art und Weise der Verarbeitung von Aktionen ändert. Hierbei muss gegebenenfalls eine Implementierungshistorie geführt werden.
+
+<div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
+
+- ES: Speichern von Events, die zu einem Zustand führen anstatt des Zustands
+- Replay möglich, alle Rohdaten bleiben erhalten
+
+</div>
+
+Wie in Abbildung 13 zu sehen lässt sich Event Sourcing optimal mit Command-Query-Responsibility-Segregation kombinieren.
+
+![](images/wolf/s42_cqrs_with_es.png)
+
+*Abbildung 13: Kombination von CQRS und ES [Wolf, Folie 42]*
+
+Hierbei werden auf Commmand-Seite nur noch Events und kein Zustand mehr in der Datenbank gespeichert. Ein Processor-Layer ermöglicht die Übersetzung dieser Events in einen Zustand, um das Command-Model zu erzeugen. Dieses befindet sich vollständig im Hauptspeicher. Auf Query-Seite können zur Erhöhung der Performance durch Handler Snapshots angelegt werden.
+
+<div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
+
+- ES gut mit CQRS kombinierbar: Command-Seite speichert nur noch Events persistent, Query-Seite darf Zustands-Snapshots speichern
+
+</div>
+
+---
+
 - Wolff, Eberhard (2017): "Microservices: Flexible Software Architecture"
 - Evans, Eric (2003): "Domain-Driven Design: Tackling Complexity in the Heart of Software"
+- Wolf, Oliver; Talk: "CQRS for Great Good" https://speakerdeck.com/owolf/cqrs-for-great-good-2 (Aufgerufen am 02.11.2019)
