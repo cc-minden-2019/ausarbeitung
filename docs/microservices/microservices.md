@@ -99,5 +99,5 @@ Service-Oriented-Architecture | Microservices
 
 ---
 
-- Wolff, Eberhard (2017): "Microservices Flexible Software: Architecture"
+- Wolff, Eberhard (2017): "Microservices: Flexible Software Architecture"
 - https://scs-architecture.org (Abgerufen am 30.10.2019)
