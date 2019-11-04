@@ -8,7 +8,7 @@ Das aktuell bekannteste Orchestrierung System kommt von Google ist Open Source u
 
 ![image](https://www.cloud-mag.com/wp-content/uploads/2017/12/kubernetes-890x630.jpg)
 
-* Abbildung : Kubernetes Architektur *
+*Abbildung : Kubernetes Architektur*
 
 - Master
     - Der Master ist die Steuerende Instanz, die für die Verwaltung zuständig ist. Es gibt eine große Schnittstelle, um sowohl Intern als auch Extern verschiedene Informationen zu bekommen und mit dem Kubernetes Cluster zu kommunizieren.
