@@ -18,14 +18,14 @@ Eine Vorstufe ist der sogenannte `Nightly Build`. Wie es der Name erahnen lässt
     - Quality Gates
 
 ![image](https://codefluegel.com/wp-content/uploads/2019/05/ci_google.png)
-*Abbildung :  Zyklus einer Continuous Integration*
+*Abbildung 3:  Zyklus einer Continuous Integration*
 
 ## Continues Deployment / Delivery
 
 `Continues Deployment` geht nochmal ein Schritt weiter und stellt das Produkt aus der `Continues Integration` in eine lauffähige Umgebung für die Nutzung bereit. Wobei hier zwischen `Continues Delivery` unterschieden werden muss, was sich aussschließlich auf Test Umgebungen bzw. nicht Produktiv Umgebung konzentriert. Der Schritt müsste weiterhin vom `Operator` durchgeführt werden, damit die Software auf eine Produktiv Umgebung landet. Erst `Continues Deployment` spricht wirklich das automatisierte deployen von einer Produktiv Umgebung, z.B für den Kunden.
 
 ![image](https://www.gocd.org/assets/images/blog/continous-delivery-vs-deployment-infographic/continuous-delivery-vs-continuous-deployment-infographic-305dd620.png)
-*Abbildung: Hier nochmal der Unterschied zwischen **Deployment** und **Delivery***
+*Abbildung 4: Hier nochmal der Unterschied zwischen **Deployment** und **Delivery***
 
 ### Vorteile
 

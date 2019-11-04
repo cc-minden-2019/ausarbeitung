@@ -7,8 +7,7 @@ Container haben gezeigt, wie praktisch man Software archivieren kann und per ein
 Das aktuell bekannteste Orchestrierung System kommt von Google ist Open Source und heißt "Kubernetes". Hier folgt die Architektur um ein besseres Verständis über `Kubernetes` zu bekommen:
 
 ![image](https://www.cloud-mag.com/wp-content/uploads/2017/12/kubernetes-890x630.jpg)
-
-*Abbildung : Kubernetes Architektur*
+*Abbildung 6: Kubernetes Architektur*
 
 - Master
     - Der Master ist die Steuerende Instanz, die für die Verwaltung zuständig ist. Es gibt eine große Schnittstelle, um sowohl Intern als auch Extern verschiedene Informationen zu bekommen und mit dem Kubernetes Cluster zu kommunizieren.
