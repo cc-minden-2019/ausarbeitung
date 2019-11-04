@@ -9,7 +9,7 @@
 
 - Cloud Computing
 - [XaaS](cloud-computing/xaas.md)
-    - [OpenStack](cloud-computing/openstack.md)
+	- [OpenStack](cloud-computing/openstack.md)
 - [Bereitstellungsmodelle](cloud-computing/bereitstellungsmodelle.md)
 - [Edge-/Fog-Computing](cloud-computing/edge_fog.md)
 - [Plattformen](cloud-computing/plattformen.md)
@@ -19,6 +19,6 @@
 
 - Microservices
 - [Microservices](microservices/microservices.md)
-- [Architektur (EDA, ES, CQRS)](microservices/architektur.md)
-- [Scale Cube](microservices/scale_cube.md)
-- [Vorteile / Nachteile](microservices/vor_nachteile.md)
+- [Architektur](microservices/architektur.md)
+- [Skalierung](microservices/skalierung.md)
+- [Vorteile / Nachteile](microservices/vorteile_nachteile.md)
