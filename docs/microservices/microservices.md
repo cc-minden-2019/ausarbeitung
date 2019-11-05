@@ -14,7 +14,7 @@ Der Gegensatz zu Microservices sind **Bereitestellungsmonolithen**. Diese könne
 
 # Self-Contained Systems (SCS)
 
-![](images/own/scs_schema.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/own/scs_schema.png)
 *Abbildung 1: Schema Self-Contained Systems*
 
 **Self-Contained Systems (SCS)** sind autonome Webanwendungen, welche eine Benutzeroberfläche, Geschäftslogik und einen persistenten Datenspeicher beinhalten. Sie decken dabei genau eine Domäne ab.
@@ -32,7 +32,7 @@ SCS können ihre Logik aus mehreren Microservices zusammensetzen, im Extremfall 
 
 **Service-Oriented-Architekture (SOA)** beschreibt neben Microservices einen weiteren Architekturansatz zur Modularisierung von Software. Hierbei werden Services jedoch nicht notwendigerweise neu implementiert. Häufig werden Services in bereits existierenden Monolithen von Außerhalb der Applikation durch eine Schnittstelle verfügbar gemacht.
 
-![](images/wolff/s84_soa_stack.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s84_soa_stack.png)
 *Abbildung 2: Schema SOA [Wolff, S. 84]*
 
 Ein Service sollte dabei die Eigenschaft besitzen, nur ein einzelnes Stück der Domäne zu implementieren. Es sollte möglich sein, den Service isoliert zu nutzen. Und dieser sollte, wie Microservices auch, über ein Netzwerk verfügbar gemacht werden. Um einen Service zu verwenden muss das Wissen über die Schnittstelle ausreichen. Wie auch bei Microservices ist Wert auf eine programmiersprachen- und plattformunabhängige Schnittstelle zu legen. Zur Vermeidung von Abhängigkeiten, werden SOA-Services grobkörnig und damit tendenziell größer als Microservices gestaltet.
@@ -54,7 +54,7 @@ Eine zentrale Benutzeroberfläche (häufig "Portal" genannt) stellt die Funktion
 
 ---
 
-![](images/own/orchestration_choreography.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/own/orchestration_choreography.png)
 *Abbildung 3: Schema Orchestration vs. Choreographie*
 
 Bei der Komposition durch **Orchestrierung** (Orchestration) implementiert eine Koordinationsschicht (Orchestration-/Coordination-Layer) die Steuerung oder Koordination aller Dienstaufrufe und damit die Geschäftsprozesse.
@@ -86,7 +86,7 @@ Während Microservices, gerade als Self-Contained System eigene Benutzeroberflä
 
 Service-Oriented-Architecture | Microservices
 --- | ---
-![](images/wolff/s84_soa_stack.png) *Abbildung 4: Schema SOA [Wolff, S. 84]* | ![](images/wolff/s90_ms_stack.png) *Abbildung 5: Schema Microservice [Wolff, S. 90]*
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s84_soa_stack.png) *Abbildung 4: Schema SOA [Wolff, S. 84]* | ![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s90_ms_stack.png) *Abbildung 5: Schema Microservice [Wolff, S. 90]*
 
 <div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
 

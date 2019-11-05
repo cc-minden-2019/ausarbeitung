@@ -29,7 +29,7 @@ Aus diesen technischen Vorteilen entstehen organisatorische Vorteile. So können
 
 Diese organisatorischen Vorteile resultieren in Vorteile aus betriebswirtschaftlicher Sicht. Eine Zerlegung von großen Projekten in mehrere kleine mit hoher Selbstorganisation sorgt zum einen für das Wegfallen eines zentralen Projektmanagements. Eine Effizenzsteigerung wird dabei durch einen geringeren Kommunikationsoverhead erreicht. Wie in Abbildung 1 gezeigt, können dadurch parallel an User-Stories gearbeitet werden. Eine Zerlegung kann weiterhin Risiken verringern. Das Scheitern eines kleinen Projekts hat üblicherweise geringere Auswirkungen. Auch wirken sich Hindernisse und Probleme bei dem Erreichen von Zielen nur auf einen Teil des Systems aus.
 
-![](images/wolff/s66_parallel_userstories.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s66_parallel_userstories.png)
 
 *Abbildung 1: Zerlegung in Teilprojekte ermöglicht paralleles Arbeiten an Userstories [Wolff, S. 66]*
 
@@ -45,7 +45,7 @@ Diese organisatorischen Vorteile resultieren in Vorteile aus betriebswirtschaftl
 
 Microservices bringen Herausforderungen mit sich, die sich grundsätzlich auf die technische Perspektive beschränken. Microservices basieren auf verteilter Netzwerkkommunikation. Diese ist deutlich langsamer als Aufrufe innerhalb eines Prozesses. Am Beispiel: Innerhalb einer nicht unrealistischen Netzwerklatenz von 0,5 Millisekunden kann ein Prozessor mit 3 GHz-Takt 1,5 Millionen Instruktionen verarbeiten.
 
-![](images/wolff/s70_network_latency.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s70_network_latency.png)
 
 *Abbildung 2: Bei verteilten Anfragen über ein Netzwerk entfällt ein großer Zeitanteil auf die Kommunikation [Wolff, S. 70]*
 

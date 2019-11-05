@@ -2,7 +2,7 @@
 
 Skalierbar sind Systeme, die bei Zugabe von Ressourcen höhere Lasten verarbeiten können. Traditionell wird zwischen **vertikaler** und **horizontaler Skalierung** unterschieden. Vertikale Skalierung ("scale up") meint, dass mehr Ressourcen genutzt werden. Konkret also, dass Services auf stärkerer Hardware deployed werden. Horizontale Skalierung ("scale out") meint, dass mehr Instanzen oder Nodes zur Verarbeitung der Last zur Verfügung stehen. Konkret also, dass Services häufiger gestartet werden.
 
-![](images/wolff/s148_scaling.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s148_scaling.png)
 
 *Abbildung 1: Horizontales und vertikales Skalieren [Wolff, S. 148]*
 
@@ -69,7 +69,7 @@ Die **Y-Achse** beschreibt das Skalieren durch funktionale Dekomposition, also d
 
 Die **Z-Achse** beschreibt das Partitionieren von Daten gemäß zum Beispiel Sharding oder auch die Distribution anhand von geografischen Grenzen. Gewissermaßen ist Skalierung auf der Z-Achse also eine Form der X-Skalierung. Vorteil von Z-Skalierung liegt in der Einfachheit und in der möglichen Optimierung von Antwortzeiten. Auch hier entsteht ein Implementierungsaufwand und möglicherweise Komplexität beim Loadbalancing.
 
-![](images/web/scale_cube.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/web/scale_cube.png)
 
 *Abbildung 2: Scale Cube [1]*
 
@@ -88,7 +88,9 @@ Um Last auf horizontal skalierte Microservices zu verteilen ist **Load Balancing
 
 Beim **Proxy-based Load Balancing** wird der Loadbalancer auf einem eigenen Server ausgeführt. Dieser stellt nach Außen eine Instanz dar, verteilt Anfragen aber auf unterschliedliche Nodes. Es ist notwendig, dass der Loadbalancer Lastinformationen von den Instanzen erhält. Dadurch können außerdem nicht-reagierende Instanzen vom Load Balancing entfernt werden, sodass Anfragen nicht an diese geleitet werden und unbeantwortet bleiben. Bei dynamischen Skalierverfahren erweist sich als Vorteil, dass sich die Last auf einer Instanz kontrolliert erhöhen lässt. Große Nachteile entstehen dadurch, dass der Loadbalancer ein Bottleneck darstellen kann, da der gesamte Traffic für mehrere Serviceinstancen über diesen geht. Weiterhin lässt sich der Ausfall des Loadbalancers nicht kompensieren. Der Service ist dann als Ganzes nicht erreichbar.
 
-![](images/wolff/s144_lb_proxy.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s144_lb_proxy.png)
+
+*Abbildung 3: Schema von Proxy-Based Load Balancing [Wolff, S. 144]*
 
 <div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
 
@@ -99,11 +101,11 @@ Beim **Proxy-based Load Balancing** wird der Loadbalancer auf einem eigenen Serv
 
 </div>
 
-*Abbildung 3: Schema von Proxy-Based Load Balancing [Wolff, S. 144]*
-
 Beim Load Balancing durch **Service Discovery** liefert ein Service Discovery-Dienst unterschiedliche Instanz-Adressen und erzeugt so ein Load Balancing. Dieses Verfahren funktioniert nur, wenn tatsächlich eine Service Discovery-Anfrage durchgeführt wird. Im Hinblick auf Caching kann ein fein-granulares Load Balancing erschwert sein. Ein weiterer Nebeneffekt ist, dass neue Instanzen erst nach einiger Zeit volle Last erhalten, was dieses Verfahren für dynamische Skalierungsverfahren ungeeignet macht. Auch Problematisch ist, dass bei Nicht-Erreichbarkeit einer Node eine neue Service Discovery-Anfrage durchgeführt werden muss. Bei Proxy-Based Load Balancing kann hier direkt reagiert werden. Eine häufige Implementierung von Load Balancing durch Service Discovery wird durch DNS realisiert.
 
-![](images/wolff/s146_lb_service_discovery.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s146_lb_service_discovery.png)
+
+*Abbildung 4: Schema von Load Balancing via Service Discovery [Wolff, S. 146]*
 
 <div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
 
@@ -113,11 +115,9 @@ Beim Load Balancing durch **Service Discovery** liefert ein Service Discovery-Di
 
 </div>
 
-*Abbildung 4: Schema von Load Balancing via Service Discovery [Wolff, S. 146]*
-
 Beim **Client-Based Load Balancing** führt der anfragende Client selbst das Load Balancing durch. Gewissermaßen handelt es sich hierbei um Proxy-Based Load Balancing, wobei der Loadbalancer nicht auf einem externen Server läuft. Der Ausfall eines Load Balancers hat somit nur für den entsprechenden Client eine Auswirkung. Weiterhin kann kein Bottleneck durch einen Load Balancer entstehen, da dieser nur Anfragen eines einzigen Clients bearbeitet. Als Nachteil stellt sich dar, dass Konfigurationen, wie zum Beispiel Änderungen bei neuen Instanzen nur sehr langsam verteilt werden können, was dieses Verfahren für dynamisches Skalieren gänzlich ungeeignet macht.
 
-![](images/wolff/s147_lb_client.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s147_lb_client.png)
 
 *Abbildung 5: Schema von Client-Based Load Balancing [Wolff, S. 147]*
 
