@@ -12,7 +12,7 @@ Aggregates stellen bei der Verteilung über mehrere Microservices ein Problem im
 
 Als weitere Bestandteile der Domänenarchitektur sind **Services** als Geschäftslogik implementierende Softwarekomponenten definiert. Sogenannte **Repositories** stellen Zugang zu allen Entitäten eines Typs zur Verfügung. Dies geschieht üblicherweise durch Nutzung einer DBMS-Technologie. **Factories** sind Softwareeinheiten, welche komplexe Aggregates erzeugen.
 
-![](images/evans/s90_ddd_map.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/evans/s90_ddd_map.png)
 
 *Abbildung 1: Map der Elemente, die eine Domänenarchitektur nach DDD beschreiben [Evans, S. 90]*
 
@@ -47,13 +47,13 @@ Conway's Law besagt "Organisationen, die Systeme entwerfen, [...] sind gezwungen
 
 Beim **Shared Kernel** teilen sich Domänenmodelle einen gemeinsamen Kern. Hierbei ist ein hohes Maß an Kommunikation der Entwicklungsteams nötig. Bei der **Customer/Supplier**-Vorgehensweise stellt sich ein Team in die Position eines Kunden, der Anforderungen an das Modell des Suppliers stellt. Hierbei ist eine klare hierachische Richtung vorgegeben. Die **Conformist**-Vorgehensweise erfordert vom bereitstellenden Domänenmodell keinerlei Kooperation. Die aufrufende Domäne ordnet sich vollständig der Modellierung der übergeordneten Domäne unter. Dieses Vorgehen ist dann Sinnvoll, wenn in der aufzurufenden Domäne viel Fachwissen steckt, welches durch die Wiederspieglung im Modell durch den Aufrufer mitgenutzt werden kann. Bei Nutzung eines **Anticorruption-Layers** wird dieses Vorgehen abgeschwächt. Dieser agiert als eine Art Adapter und übersetzt das aufzurufende Domänenmodell in das eigene. Dies sorgt für eine vollständige Entkopplung der beiden System.
 
-![](images/own/bounded_context_cooperation.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/own/bounded_context_cooperation.png)
 
 *Abbildung 2: Schematischer Überblick über verschiedene Ansätze zur Interaktion von Bounded Contexts*
 
 Als weitere Konzepte nennt Domain-Driven Design eine vollständige Isolation durch den Verzicht auf jegliche Integration, also das gehen von **seperate Ways**. Alternativ stellen im **Open Host Service**-Modell Systeme Dienste öffentlich zur Verfügung, die andere nutzen. Der Ansatz der **Published Language** stellt mehr eine Art der Kooperation der Teams als eine Methode zur Integration von Systemen dar. Hierbei teilen sich verschiedene Domänenmodelle die gleiche definierte ubiquitous Language.
 
-![](images/own/bounded_context_cooperation2.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/own/bounded_context_cooperation2.png)
 
 *Abbildung 3: Schematischer Überblick über verschiedene Ansätze zur Interaktion von Bounded Contexts*
 
@@ -82,25 +82,25 @@ Für die Fragestellung der Verteilung von einer gleichen Codebase auf mehrere Mi
 
 Ein alternativer Lösungsansatz ist die Verwendung von **gemeinsamen Bibliotheken**. Hierbei wird gemeinsam zu nutzender Code in eine Bibliothek ausgelagert, welche von entsprechenden Microservices genutzt wird. Dieses Vorgehen birgt den Nachteil, dass Änderungen in der Bibliothek gegebenenfalls Änderungen in den nutzenden Microservices zur Folge haben.
 
-![](images/wolff/s112_refactoring_shared_library.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s112_refactoring_shared_library.png)
 
 *Abbildung 4: Schema der Verlagerung von Code in eine gemeinsame Bibliothek [Wolff, S. 112]*
 
 Eine Alternative dazu stellt das Verlagern von Code in einem **gemeinsamen Service** dar. Hierbei wird auf die Nutzung einer Bibliothek verzichtet und die zu teilende Funktionalität durch einen neuen Microservice implementiert. Dieses Vorgehen verkleinert grundsätzlich die Größe der Microservices.
 
-![](images/wolff/s115_refactoring_shared_service.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s115_refactoring_shared_service.png)
 
 *Abbildung 5: Schema der Verlagerung von Code in eine gemeinsamen Service [Wolff, S. 115]*
 
 Sollten zwei Microservices viel kommunizieren, sind diese nicht lose gekoppelt. Ein **Verlagern von Code** in den aufrufenden Service kann Abhilfe verschaffen. Da Microservices jedoch in unterschiedlichen Sprachen und Technologien entwickelt sein können kann dieses Vorgehen eine Neuimplementierung erforderlich machen.
 
-![](images/wolff/s114_refactoring_transfer.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s114_refactoring_transfer.png)
 
 *Abbildung 6: Schema des Transfer von Code von einen in einen anderen Microservice [Wolff, S. 114]*
 
 Bei langer Entwicklung einer Microservice-Architektur kann durch das Wachsen dieser im Zuge des Refactoring ein Kleinhalten der Größe von Microservices notwendig sein. Hierfür kann Code in einen **neuen Microservice** verlagert werden. Durch dieses Vorgehen kann unter Anderem auch Verantwortlichkeit an ein anderes, gegebenenfalls neues Team abgegeben werden.
 
-![](images/wolff/s116_refactoring_new_service.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s116_refactoring_new_service.png)
 
 *Abbildung 7: Schema des Transfer von Code von einen in einen neuen Microservice [Wolff, S. 116]*
 
@@ -145,7 +145,7 @@ Transaktionen können nicht über mehrere Microservices hinweg sichergestellt we
 
 Konsistenz ist über mehrere Microservices ebenfalls schwer zu garantieren. Da asynchroner Netzwerkverkehr zu verzögerten Datenänderungen und somit temporärer Inkonsistenz führt. Das spricht für große Microservices.
 
-![](images/wolff/s34_size_limitations.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolff/s34_size_limitations.png)
 
 *Abbildung 8: Einflussfaktoren auf die Größe von Microservices [Wolff, S. 34]*
 
@@ -181,13 +181,13 @@ class Foo {
 
 **Command-Query-Responsibility-Segregation (CQRS)** beschreibt das Anwenden des CQS-Prinzip (Scope: Klasse) auf den Scope eines Bounded Contexts.
 
-![](images/wolf/s17_default_architecture.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolf/s17_default_architecture.png)
 
 *Abbildung 9: Klassisches Architekturschema nach DDD [Wolf, Folie 17]*
 
 Die Anwendung von CQRS sorgt für eine Aufteilung nach Command-Services und Query-Services.
 
-![](images/wolf/s27_cqrs_architecture.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolf/s27_cqrs_architecture.png)
 
 *Abbildung 10: DDD-Architekturschema nach Anwendung von CQRS [Wolf, Folie 27]*
 
@@ -202,13 +202,13 @@ Es kann hierbei zahlreiche Command- oder Query-Microservices mit einer hohen Koh
 
 Bei asymmetrischer Last kann außerdem skaliert werden. Häufig finden sich auf Query-Seite mehr Anfragen. Nun kann diese einfach horizontal skaliert werden. Weiterhin ist bei einer Aufteilung in unterschiedliche Query-Services eine sehr granulare Skalierung von zum Beispiel eines einzelnen Services möglich.
 
-![](images/wolf/s28_cqrs_asymmetric_scaling.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolf/s28_cqrs_asymmetric_scaling.png)
 
 *Abbildung 11: CQRS macht asymmetrisches Skalieren möglich [Wolf, Folie 28]*
 
 CQRS kann auch auf das Domänenmodell dahingehend angewendet werden, dass dieses in ein spezialisiertes Command- und Query-Model aufgeteilt wird. Das Query-Modell kann hierbei durch zum Beispiel denormalisierte Daten oder spezielle Views auf große Anfragemengen optimiert werden.
 
-![](images/wolf/s30_cqrs_specialist_model.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolf/s30_cqrs_specialist_model.png)
 
 *Abbildung 12: CQRS erlaubt das Aufteilen des Domänenmodells [Wolf, Folie 30]*
 
@@ -239,7 +239,7 @@ Die Komplexität erhöht sich, wenn die Art und Weise der Verarbeitung von Aktio
 
 Wie in Abbildung 13 zu sehen lässt sich Event Sourcing optimal mit Command-Query-Responsibility-Segregation kombinieren.
 
-![](images/wolf/s42_cqrs_with_es.png)
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/microservices/images/wolf/s42_cqrs_with_es.png)
 
 *Abbildung 13: Kombination von CQRS und ES [Wolf, Folie 42]*
 
