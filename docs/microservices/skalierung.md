@@ -1,6 +1,6 @@
 # Skalierung
 
-Skalierbar sind Systeme, die bei Zugabe von Ressourcen höhere Lasten verarbeiten können. Traditionell wird zwischen **vertikaler** und **horizontaler Skalierung** unterschieden. Vertikale Skalierung ("scale up") meint, dass mehr Ressourcen genutzt werden. Konkret also, dass Services auf stärkeren Systemen deployed werden. Horizontale Skalierung ("scale out") meint, dass mehr Instanzen oder Nodes zur Verarbeitung der Last zur Verfügung stehen. Konkret also, dass Services häufiger gestartet werden.
+Skalierbar sind Systeme, die bei Zugabe von Ressourcen höhere Lasten verarbeiten können. Traditionell wird zwischen **vertikaler** und **horizontaler Skalierung** unterschieden. Vertikale Skalierung ("scale up") meint, dass mehr Ressourcen genutzt werden. Konkret also, dass Services auf stärkerer Hardware deployed werden. Horizontale Skalierung ("scale out") meint, dass mehr Instanzen oder Nodes zur Verarbeitung der Last zur Verfügung stehen. Konkret also, dass Services häufiger gestartet werden.
 
 ![](images/wolff/s148_scaling.png)
 
@@ -29,7 +29,7 @@ Eine Automatisierung des Skalierungsprozesses wird als **dynamische Skalierung**
 
 ## Microservices und Skalierbarkeit
 
-Microservices sind durch ihre Isolation optimal granular und unabhängig voneinander Skalierbar. Für dynamische Skalierungsprozesse sollte die größe und die Bereitstellungszeit eines Microservices beachtet werden. Üblicherweise liegt bei dieser Eigenschaft aber die Stärke von Microservices. Microservice-basierende Architekturen basieren meist auf automatischen Deployment-Prozessen, was das Etablieren von dynamischer Skalierung sehr einfach macht.
+Microservices sind durch ihre Isolation optimal granular und unabhängig voneinander Skalierbar. Für dynamische Skalierungsprozesse sollte die Größe und die Bereitstellungszeit eines Microservices beachtet werden. Üblicherweise liegt bei dieser Eigenschaft aber die Stärke von Microservices. Microservice-basierende Architekturen beinhalten meist automatische Deployment-Prozesse, was das Etablieren von dynamischer Skalierung sehr einfach macht.
 
 <div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
 
@@ -39,7 +39,7 @@ Microservices sind durch ihre Isolation optimal granular und unabhängig voneina
 
 ## Sharding
 
-**Sharding** beschreibt das Vorgehen, die Gesamtdatenmenge auf verschiedene Instanzen von verteilen, sodass jede eine Teilverantwortlichkeit erhält. Am Beispiel von Personendaten könnten alle Nachnamen von A bis F von einem Service gehandled werden. Sharding stellt eine Variation des horizontalen Skalierens dar, da mehr Nodes zum Einsatz kommen. Beim Loadbalancing entsteht durch Sharing eine gewisse Komplexität, da Daten nun korrekt verteilt werden müssen.
+**Sharding** beschreibt das Vorgehen, die Gesamtdatenmenge auf verschiedene Instanzen zu verteilen, sodass jede eine Teilverantwortlichkeit erhält. Am Beispiel von Personendaten könnten alle Nachnamen von A bis F von einem Service gehandhabt werden. Sharding stellt eine Variation des horizontalen Skalierens dar, da mehr Nodes zum Einsatz kommen. Beim Loadbalancing entsteht durch Sharing eine gewisse Komplexität, da Daten nun korrekt verteilt werden müssen.
 
 <div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
 
@@ -55,7 +55,7 @@ Ziel von Skalierung ist es, eine höhere Anfragemenge pro Zeiteinheit verarbeite
 
 - Ziel: Erhöhen der Anfragemenge pro Zeiteinheit
 - Antwortzeit optimalerweise konstant
-- Verbesserung der Antwortzeit durch vertikales Skalieren
+- Verbesserung der Antwortzeit durch vertikales Skalieren, Caches oder Datenreplikation
 
 </div>
 
@@ -65,7 +65,7 @@ Das Modell des **Scale Cube** beschreibt drei Skalierungsachsen.
 
 Die **X-Achse** entspricht horizontalem Skalieren. Vorteil dieses Vorgehens ist die Einfachheit der Umsetzung und die Möglichkeit zu dynamischen Skalierungsverfahren. Nachteil sind die entstehenden Kosten durch neu benötigte Ressourcen und Infrastruktur.
 
-Die **Y-Achse** das Skalieren durch funktionale Dekomposition, also den Prozess des Zerlegens in funktionale Einheiten, wie etwa auch beim Zerlegen von Monolithen in Microservices. Hierbei erfolgt zum Beispiel eine Skalierung durch deployen von kleineren Bereitstellungseinheiten auf gleicher Hardware. Durch dieses Vorgehen wird eine granulare Skalierung erst möglich. Y-Skalierung ist wiederum intelektuell anspruchsvoll und erfordert Implementierungsaufwand.
+Die **Y-Achse** beschreibt das Skalieren durch funktionale Dekomposition, also den Prozess des Zerlegens in funktionale Einheiten, wie etwa auch beim Zerlegen von Monolithen in Microservices. Hierbei erfolgt zum Beispiel eine Skalierung durch deployen von kleineren Bereitstellungseinheiten auf gleicher Hardware. Durch dieses Vorgehen wird eine granulare Skalierung erst möglich. Y-Skalierung ist wiederum intellektuell anspruchsvoll und erfordert Implementierungsaufwand.
 
 Die **Z-Achse** beschreibt das Partitionieren von Daten gemäß zum Beispiel Sharding oder auch die Distribution anhand von geografischen Grenzen. Gewissermaßen ist Skalierung auf der Z-Achse also eine Form der X-Skalierung. Vorteil von Z-Skalierung liegt in der Einfachheit und in der möglichen Optimierung von Antwortzeiten. Auch hier entsteht ein Implementierungsaufwand und möglicherweise Komplexität beim Loadbalancing.
 
@@ -86,7 +86,7 @@ Die **Z-Achse** beschreibt das Partitionieren von Daten gemäß zum Beispiel Sha
 
 Um Last auf horizontal skalierte Microservices zu verteilen ist **Load Balancing** erforderlich. Es werden drei Vorgehensweise für die Lastverteilung unterschieden.
 
-Beim **Proxy-based Load Balancing** wird der Loadbalancer auf einem eigenen Server ausgeführt. Dieser stellt nach Außen eine Instanz da, verteilt Anfragen aber auf unterschliedliche Nodes. Es ist notwendig, dass der Loadbalancer Lastinformationen von den Instanzen erhält, dadurch können aber auch nicht-reagierende Instanzen vom Load Balancing entfernt werden, sodass Anfragen nicht an diese geleitet werden und unbeantwortet bleiben. Bei dynamischen Skalierverfahren erweist sich als Vorteil, dass sich die Last auf einer Instanz kontrolliert erhöhen lässt. Große Nachteile entstehen dadurch, dass der Loadbalancer ein Bottleneck darstellen kann, da der gesamte Traffic für mehrere Serviceinstancen über diesen geht. Weiterhin lässt sich der Ausfall des Loadbalancers nicht kompensieren. Der Service ist dann als ganzes nicht erreichbar.
+Beim **Proxy-based Load Balancing** wird der Loadbalancer auf einem eigenen Server ausgeführt. Dieser stellt nach Außen eine Instanz dar, verteilt Anfragen aber auf unterschliedliche Nodes. Es ist notwendig, dass der Loadbalancer Lastinformationen von den Instanzen erhält. Dadurch können außerdem nicht-reagierende Instanzen vom Load Balancing entfernt werden, sodass Anfragen nicht an diese geleitet werden und unbeantwortet bleiben. Bei dynamischen Skalierverfahren erweist sich als Vorteil, dass sich die Last auf einer Instanz kontrolliert erhöhen lässt. Große Nachteile entstehen dadurch, dass der Loadbalancer ein Bottleneck darstellen kann, da der gesamte Traffic für mehrere Serviceinstancen über diesen geht. Weiterhin lässt sich der Ausfall des Loadbalancers nicht kompensieren. Der Service ist dann als Ganzes nicht erreichbar.
 
 ![](images/wolff/s144_lb_proxy.png)
 
@@ -101,7 +101,7 @@ Beim **Proxy-based Load Balancing** wird der Loadbalancer auf einem eigenen Serv
 
 *Abbildung 3: Schema von Proxy-Based Load Balancing [Wolff, S. 144]*
 
-Beim Load Balancing durch **Service Discovery** liefert ein Service Discovery-Dienst unterschiedliche Instanz-Adressen und erzeugt so ein Loadbalancing. Dieses Verfahren funktioniert nur, wenn tatsächlich eine Service Discovery-Anfrage durchgeführt wird. Im Hinblick auf Caching kann ein fein-granulares Load Balancing erschwert sein. Ein weitere Nebeneffekt ist, dass neue Instanzen erst nach einiger Zeit volle Last erhalten, was dieses Verfahren für dynamische Skalierungsverfahren ungeeignet macht. Auch Problematisch ist, dass bei nicht-erreichbarkeit einer Node eine neue Service Discovery-Anfrage durchgeführt werden muss. Bei Proxy-Based Load Balancing kann hier direkt reagiert werden. Eine häufige Implementierung von Load Balancing durch Service Discovery wird mithilfe von DNS realisiert.
+Beim Load Balancing durch **Service Discovery** liefert ein Service Discovery-Dienst unterschiedliche Instanz-Adressen und erzeugt so ein Load Balancing. Dieses Verfahren funktioniert nur, wenn tatsächlich eine Service Discovery-Anfrage durchgeführt wird. Im Hinblick auf Caching kann ein fein-granulares Load Balancing erschwert sein. Ein weiterer Nebeneffekt ist, dass neue Instanzen erst nach einiger Zeit volle Last erhalten, was dieses Verfahren für dynamische Skalierungsverfahren ungeeignet macht. Auch Problematisch ist, dass bei Nicht-Erreichbarkeit einer Node eine neue Service Discovery-Anfrage durchgeführt werden muss. Bei Proxy-Based Load Balancing kann hier direkt reagiert werden. Eine häufige Implementierung von Load Balancing durch Service Discovery wird durch DNS realisiert.
 
 ![](images/wolff/s146_lb_service_discovery.png)
 
@@ -125,7 +125,7 @@ Beim **Client-Based Load Balancing** führt der anfragende Client selbst das Loa
 
 - Client-based Load Balancing: lokale Version des Proxy-based Load Balancing
 - Loadbalancer wird auf anfragenden Client ausgeführt
-- Kein Bottleneck, Ausfall keine Auswirkungen auf weitere Clients
+- Kein Bottleneck, Ausfall hat keine Auswirkungen auf weitere Clients
 - Langsame Verteilung von Konfigurationsänderungen
 
 </div>

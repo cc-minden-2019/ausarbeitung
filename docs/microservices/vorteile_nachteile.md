@@ -6,7 +6,7 @@ Microservices bringen viele Vorteile aus technischer Perspektive mit sich. Durch
 
 Auch eine Erosion der Architektur wird durch einfache Ersetzbarkeit verhindert. Wenn ein Microservice zu einem Legacy-System wird, kann dieser einfach ersetzt werden. In bestehenden Systemen können Microservices als Adapter für Legacy-Module eingesetzt werden, solange diese eine Netzwerk-Schnittstelle bereitstellen. Ein Service kann dann erweiternd Teile der Anfragen selbst bearbeiten oder Anfragen für das Legacy-System übersetzen. Dieses Prinzip folgt der Orchestration im Sinne von zum Beispiel SOA.
 
-Microservice-basierte Architekturen sind prädestiniert für effektive Skalierung. So können große Anfragemengen in optimierter Antwortzeit behandelt werden. Zuletzt ist das Entwickeln von Microservices in jeder Sprache und auf jeder Plattform möglich, solange eine Netzwerkkommunikation mit anderen Services möglich ist. Diese freie Technologiewahl ermöglicht nicht nur das Nutzen der neusten oder für einen Anwendungsfall besten Technologie. Auch können neue Technologien mit geringem Risiko in einem Microservice getestet werden. Wenn diese sich als ungeeignet herausstellt, kommt die einfache Ersetzbarkeit zum tragen.
+Microservice-basierte Architekturen sind prädestiniert für effektive Skalierung. So können große Anfragemengen in optimierter Antwortzeit behandelt werden. Zuletzt ist das Entwickeln von Microservices in jeder Sprache und auf jeder Plattform möglich, solange eine Netzwerkkommunikation mit anderen Services möglich ist. Diese freie Technologiewahl ermöglicht nicht nur das Nutzen der neusten oder für einen Anwendungsfall besten Technologie. Auch können neue Technologien mit geringem Risiko in einem Microservice getestet werden. Wenn diese sich als ungeeignet herausstellen, kommt die einfache Ersetzbarkeit zum tragen.
 
 <div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
 
@@ -35,7 +35,7 @@ Diese organisatorischen Vorteile resultieren in Vorteile aus betriebswirtschaftl
 
 <div style="background: #7FFFFF; padding: 1px 25px; margin-bottom: 25px;">
 
-- Kein zentrales Projektmanagements (weniger Kommunikation, mehr Effizienz)
+- Kein zentrales Projektmanagement (weniger Kommunikation, mehr Effizienz)
 - Parallele Arbeit an User-Stories
 - Geringes Risiko (Scheitern, Probleme haben geringe Auswirkungen)
 
@@ -43,7 +43,7 @@ Diese organisatorischen Vorteile resultieren in Vorteile aus betriebswirtschaftl
 
 ## Nachteile / Herausforderungen
 
-Microservices bringen Herausforderungen mit sich, die sich grundsätzlich auf die technische Perspektive beschränken. Microservices basieren auf verteilter Netzwerkkommunikation. Diese ist deutlich langsamer als Aufrufe innerhalb eines Prozesses. Am Beispiel: Innerhalb einer nicht unrealitischen Netzwerklatenz von 0,5 Millisekunden kann ein Prozessor mit 3 GHz-Takt 1,5 Millionen Instruktionen verarbeiten.
+Microservices bringen Herausforderungen mit sich, die sich grundsätzlich auf die technische Perspektive beschränken. Microservices basieren auf verteilter Netzwerkkommunikation. Diese ist deutlich langsamer als Aufrufe innerhalb eines Prozesses. Am Beispiel: Innerhalb einer nicht unrealistischen Netzwerklatenz von 0,5 Millisekunden kann ein Prozessor mit 3 GHz-Takt 1,5 Millionen Instruktionen verarbeiten.
 
 ![](images/wolff/s70_network_latency.png)
 
