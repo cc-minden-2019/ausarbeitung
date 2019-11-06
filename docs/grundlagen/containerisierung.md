@@ -35,3 +35,7 @@ Weiteres Praktisches Feature von Container ist die Dateisystem Ebene. Es gibt di
 Nun haben wir Möglichkeit flexibel zu sein. Wenn wir skalieren wollen, müssen wir jeglich das Container Image File aufspielen, unabhängig davon welche Linux Distribution wir haben. Wir sind `Plug and Play`. 
 
 Dem Operator ist nun einiges an Arbeit erspart, aber lässt sich vielleicht mehr sparen? Ja lässt es sich, `Orchestrieren` ist das Stichwort!
+
+---
+
+- John Arundel, Justin Domingus (2019) - Cloud Native DevOps with Kubernetes

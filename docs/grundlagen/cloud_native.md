@@ -37,3 +37,9 @@ Aber was für Technologien/Methoden benötigt man, um eben genanntes zu erreiche
 
 ![cloud-native-concepts](https://miro.medium.com/max/358/1*8tS36qcyZ2c-kYF3zSrbfA.png)
 *Abbildung 1: Die 4 Keywords für Cloud-Native*
+
+---
+
+- John Arundel, Justin Domingus (2019) - Cloud Native DevOps with Kubernetes
+- https://www.cloudcomputing-insider.de/was-ist-cloud-native-a-669681/
+- https://www.dev-insider.de/was-ist-cloud-native-a-827494/

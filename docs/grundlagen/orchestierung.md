@@ -15,3 +15,8 @@ Das aktuell bekannteste Orchestrierung System kommt von Google ist Open Source u
     - Ein Knotenpunkt der vom Master angesprochen und genutzt werden kann, um hierauf Container zum laufen zu bringen. 
 - Pod
     - Beschreibt die Sammlung von Container auf einem Node. Die Container innerhalb eines Pods teilen sich die Ressourcen.
+
+--- 
+
+- John Arundel, Justin Domingus (2019) - Cloud Native DevOps with Kubernetes
+- https://www.cloud-mag.com/was-ist-container-orchestrierung/

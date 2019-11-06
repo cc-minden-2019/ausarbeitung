@@ -32,3 +32,8 @@ Eine Vorstufe ist der sogenannte `Nightly Build`. Wie es der Name erahnen lässt
 - Automatisiertes Releasen
     - Operator muss es nicht per Hand erledigen und es gibt hier eventuell keine Konflikte außer es lässt sich nicht bauen oder Quality Gates schlagen fehl
 - Kunde bekommt im Optimalfall nichts von dem Deployment mit und das Update ist fließend(`Rolling Releases`)
+
+---
+
+- https://de.wikipedia.org/wiki/Kontinuierliche_Integration
+- https://de.wikipedia.org/wiki/Continuous_Delivery

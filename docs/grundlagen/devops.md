@@ -22,3 +22,9 @@ Die `Developer` entwickeln die Software und pushen ihre Änderungen ins System. 
  - Gleiche Interessen und keine allgemeine Konflikthaltung 
 - Software wird schneller entwickelt
     - Es kann schneller evaluiert und gegebenfalls reagiert werden 
+
+---
+
+- John Arundel, Justin Domingus (2019) - Cloud Native DevOps with Kubernetes
+- https://www.dev-insider.de/was-ist-devops-a-570286/
+- https://de.wikipedia.org/wiki/DevOps
