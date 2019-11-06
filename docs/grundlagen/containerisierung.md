@@ -3,24 +3,25 @@
 Ein großes Problem was Software bzw. das laufen von Software mit sich bringt, ist das Aufsetzen einer Software auf einen Host. Denn es werden gerne Abhängigkeiten benötigt, sei es:
 - Betriebssystem
 - Andere Softwaresysteme
-    - Datenbanksystem
+    - Datenbanksysteme
+    - etc
 - Bibliotheken
 
-Wie bekommen wir nun die Eigenschaft, dass wir Problemlos ein Microservice aufspielen können, ohne das ein `Operator` umständlich das System ändern muss oder gar ein neues System installieren muss, zuzüglich alle Abhängigkeiten, die benötigt werden, damit der Microservice läuft? 
-Containers sind die Antwort!
-Bevor wir uns aber weiter mit Container beschäftigen, schauen wir uns zunächst andere Ansätze an, damit wir am Ende die Effizienz von Container verstehen.
+Wie bekommen wir nun die Eigenschaft, dass wir Problemlos ein Microservice aufspielen können, ohne das ein `Operator` umständlich das System ändern muss oder gar ein neues System aufsetzen/installieren muss, zuzüglich alle Abhängigkeiten, die benötigt werden, damit der Microservice läuft? 
+`Container` sind die Antwort!
+Bevor wir uns aber weiter mit `Container` beschäftigen, schauen wir uns zunächst andere Ansätze an, damit wir am Ende die Effizienz von Container verstehen.
 
 ## Paket Systeme
 
-NodeJS ist ein gutes Beispiel, dass in der Regel standardmäßig mit NPM (Node Package Manager) daher kommt. Man kann mit Hilfe des Package Manager recht problemos die Abhängigkeiten, die der Quellcode benötigt, installieren. Das ganze funktioniert mit einer Konfiguaritionsdatei, die alle Abhängigkeiten beschreiben und der Package Manager weiß, was installiert werden muss. Die Packages werden in der Regel zentral in einem riesigen Repository von z.B Node selbst gespeichert, wobei der Einsatz von eigenen Repositories auch allgemein gewährleistet wird. Dennoch fehlen Abhängigkeiten wie Datenbanksysteme oder andere Software Systeme unabhängig von der eigene Codebasis. Auch die Laufzeit der Sprache muss installiert werden. Bei unserem Beispiel also Node und NPM. Der Aufwand für den Operator hat sich zwar verringert, dennoch ist es noch mühselig, sich um die Microservices zu kümmern.
+NodeJS ist ein gutes Beispiel, dass in der Regel standardmäßig mit NPM (Node Package Manager) daher kommt. Man kann mit Hilfe des Package Manager recht problemos die Abhängigkeiten, die der Quellcode benötigt, installieren. Das ganze funktioniert mit einer Konfiguaritionsdatei, die alle Abhängigkeiten beschreibt und der Package Manager weiß, was installiert werden muss. Die Packages werden in der Regel zentral in einem riesigen Repository von z.B Node selbst gespeichert, wobei der Einsatz von eigenen Repositories auch allgemein gewährleistet wird. Dennoch fehlen Abhängigkeiten wie Datenbanksysteme oder andere Software Systeme unabhängig von der eigene Codebasis. Auch die Laufzeit der Sprache muss installiert werden. Bei unserem Beispiel also Node und NPM. Der Aufwand für den `Operator` hat sich zwar verringert, dennoch ist es noch mühselig, sich um die Microservices zu kümmern.
 
 ## Omnibus Paket
 
-Ein Omnibus Paket geht nochmal ein Schritt weiter und beschränkt sich nicht nur auf die aktuelle Code Basis bzw. der Sprache, in der, der `Microservice` installiert wird. Hier werden Abhängigkeiten wie ein Datenbanksystem oder andere Technologien mit installiert. Ein Problem, was aber weiterhin besteht, dass es alles auf einem Host System ausgeführt wird bzw. es keine Kapselung statt findet, was eventuell erwünscht ist. Sicherheitstechnisch kann das auch zu Probleme führen, wenn innerhalb des Omnibus Package Schadware befindet, da man eventuell Root Rechte auf dem Host bekommen kann, durch die fehlende Kapselung. 
+Ein Omnibus Paket geht nochmal ein Schritt weiter und beschränkt sich nicht nur auf die aktuelle Code Basis bzw. der Sprache, in der, der `Microservice` geschrieben wurde. Hier werden Abhängigkeiten wie ein Datenbanksystem oder andere Technologien mit installiert. Ein Problem, was aber weiterhin bestehen bleibt ist, dass es alles auf einem Host System ausgeführt wird bzw. es keine Kapselung statt findet, was eventuell erwünscht ist. Sicherheitstechnisch kann das auch zu Probleme führen, wenn innerhalb des Omnibus Package Schadware befindet, da man eventuell Root Rechte auf dem Host bekommen kann, durch die fehlende Kapselung. 
 
 ## Virtuelle Maschinen
 
-Es lässt sich seit Jahren ganze Bebtriebssysteme emulieren bzw. virtualisieren. Man hat also im Optimalfall ein Betriebssystem Image, was das zu laufende Betriebssystem enthält, samt Konfiguration und die zu laufend bringende Software samt Abhängigkeiten. Der `Operator` müsste sich schließlich nur darum kümmern, dass Image aufzusetzen. Auch der Nachteil bezüglich Omnibus Package entfällt hier. Jede Virtuelle Maschine ist auf ihren Scope beschränkt und man hat keine wirkliche Möglichkeit, das Host System auf der die VM läuft, zu modifizieren. Der Ansatz hat aber auch so seine Macken, der einer `Cloud Native` Anwendung eher zur Last fällt. Das Image ist sehr groß, da man viel Overhead durch das beiliegende Betriebssystem hat. Nicht gerade Optimal, wenn so ein Image per Netzwerk hin und her gesendet werden muss. Es erhöht unnötig Netzwerk Traffic. Außerdem ist die Perfomance rund bis zu 30% langsamer, da die Virtualisierung nicht nur ein Software Konzept sondern auch Hardware Konzept entspricht und hier auch nochmals ein Overhead ensteht. 
+Es lässt sich seit Jahren ganze Bebtriebssysteme emulieren bzw. virtualisieren. Man hat also im Optimalfall ein Betriebssystem Image, was das zu laufende Betriebssystem enthält, samt Konfiguration und `Microservices` samt Abhängigkeiten. Der `Operator` müsste sich schließlich nur darum kümmern, dass Image aufzusetzen. Auch der Nachteil bezüglich Omnibus Package entfällt hier. Jede Virtuelle Maschine ist auf ihren Scope beschränkt und man hat keine wirkliche Möglichkeit, das Host System auf der die VM läuft, zu manipulieren. Der Ansatz hat aber auch so seine Macken, der einer `Cloud Native` Anwendung eher zur Last fällt. Das Image ist sehr groß, da man viel Overhead durch das beiliegende Betriebssystem hat. Nicht gerade Optimal, wenn so ein Image per Netzwerk hin und her gesendet werden muss. Es erhöht unnötig Netzwerk Traffic. Außerdem ist die Perfomance rund bis zu 30% langsamer, da die Virtualisierung nicht nur ein Software Konzept sondern auch Hardware Konzept entspricht und hier auch nochmals ein Overhead ensteht. 
 
 ## Was sind den nun Container?
 
