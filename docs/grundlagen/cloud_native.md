@@ -36,6 +36,7 @@ Dadurch verspricht man sich, die Anwendung schneller an den Markt zu bringen, da
 Aber was für Technologien/Methoden benötigt man, um eben genanntes zu erreichen zu können? Diese Frage beantwortet folgende Abbildung, die die Hauptbestandteile einer `Cloud Native` Anwendung beschreibt:
 
 ![cloud-native-concepts](https://miro.medium.com/max/358/1*8tS36qcyZ2c-kYF3zSrbfA.png)
+
 *Abbildung 1: Die 4 Keywords für Cloud-Native*
 
 ---
