@@ -3,17 +3,17 @@
 - [DevOps](grundlagen/devops.md)
 - [CI / CD](grundlagen/ci_cd.md)
 - [Containerisierung](grundlagen/containerisierung.md)
-- [Orchestierung](grundlagen/orchestierung.md)
+- [Orchestrierung](grundlagen/orchestierung.md)
 
 # Cloud Computing
-- [XaaS](cloud-computing/xaas.md)
+- <s>[XaaS](cloud-computing/xaas.md)</s>
 	- [OpenStack](cloud-computing/openstack.md)
-- [Bereitstellungsmodelle](cloud-computing/bereitstellungsmodelle.md)
-- [Edge-/Fog-Computing](cloud-computing/edge_fog.md)
-- [Plattformen](cloud-computing/plattformen.md)
+- <s>[Bereitstellungsmodelle](cloud-computing/bereitstellungsmodelle.md)</s>
+- <s>[Edge-/Fog-Computing](cloud-computing/edge_fog.md)</s>
+- <s>[Plattformen](cloud-computing/plattformen.md)</s>
 - [Security](cloud-computing/security.md)
 - [Design Patterns](cloud-computing/design_patterns.md)
-- [Vor-/Nachteile, Vendor-Lock-In](cloud-computing/vor_nachteile.md)
+- <s>[Vor-/Nachteile, Vendor-Lock-In](cloud-computing/vor_nachteile.md)</s>
 
 # Microservices
 - [Microservices](microservices/microservices.md)
