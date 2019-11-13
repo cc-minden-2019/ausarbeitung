@@ -31,7 +31,7 @@ Spezifikation Tracking-Service | Internes Datenmodell (Klassendiagramm) |  [/spe
 
 Task | Artefakt | Zu erarbeiten von
 -- | -- | --
-Spezifikation Physische Sicht *(Ggf. schon fertig, kein Merge-Request: Verbleib unklar)* | Verteilungsdiagramm | Ken Madlehn
+Spezifikation Physische Sicht | Verteilungsdiagramm | Ken Madlehn
 Spezifikation Küchen-Service | UI-Mockup + Datenmodell | Ken Madlehn
 Spezifikation Lager-Service | UI-Mockup + Datenmodell | Justin Drögemeier
 Spezifikation Bestell-Service | UI-Mockup + Datenmodell | Luca Berneking
