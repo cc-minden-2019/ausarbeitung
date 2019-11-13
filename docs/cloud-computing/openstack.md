@@ -4,7 +4,7 @@ When OpenStack is successfully deployed it can be used as a Infrstructure-as-a-S
 Cloud environment. In this article we will take a look on how OpenStack works and which core services are needed to get everything up and running.
 
 ## Overview
-![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/cloud-computing/img-openstack/openstack-overview.png
+![](https://media.githubusercontent.com/media/cc-minden-2019/ausarbeitung/master/docs/cloud-computing/img-openstack/openstack-overview.png)
 
 There are a few components in this overview
 - OpenStack Horizon
@@ -42,8 +42,8 @@ There are a few components in this overview
     - Is used to authenticate to the OpenStack Environment
         - For Users
         - And Services like computing or networking
-        
-        
+
+
 ## Core Services
 ### Computing
 Die wichtigste aller Komponenten ist der computing service und wird durch ***nova*** implementiert. Dieser kümmert sich

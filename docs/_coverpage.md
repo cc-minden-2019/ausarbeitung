@@ -7,4 +7,4 @@
 
 Ausarbeitung von:
 
-Luca Berneking • Leon Brandt • Justin Drögemeier • Ken Madlehn • Simon Safar
+Luca Berneking • Leon Brandt • Justin Drögemeier • Ken Madlehn
