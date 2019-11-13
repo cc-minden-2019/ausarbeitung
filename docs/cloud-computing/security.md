@@ -56,5 +56,8 @@ wodurch weitere Angriffe selbst auf verschlüsselte Verbindungen möglich werden
 In den USA kann der Staat durch einen National-Security-Letter (NSL) Alle Daten eines Benutzers von einer Firma
 beantragen, die Ihren Sitz in den USA hat. Zusammen mit dem CLOUD Act (Clarifying Lawful Overseas Use of Data Act)
 beinhaltet dies auch Daten, die in anderen Ländern gespeichert sind, solange der Hauptsitz der Firma sich in den USA befindet.
-Bei dieser Art von Zugriff wird der Firma untersagt seine Dienste dem Kunden zu verweigern oder Ihn über diesen
-Durchsuchungsvorgang zu informieren. Dabei können fast beliebige Informationen über Nutzer eingefordert werden.
+Bei dieser Art von Zugriff wird der Firma untersagt seine Dienste dem Kunden gegenüber zu verweigern oder Ihn über diesen
+Durchsuchungsvorgang zu informieren. Dabei können fast beliebige Informationen über Nutzer eingefordert werden wie Nutzungsverhalten
+und Metadaten, aus denen ersichtlich wird wann der Kunde mit wem über welchen Kanal, zum Beispiel per Email, kommuniziert hat.
+Auch nach einer solchen Durchsuchung ist es der Firma, die den NSL erhalten hat, untersagt über diesen Vorfall zu informieren.
+Dabei darf weder der Kunde, noch die Öffentlichkeit darüber aufgeklärt werden, selbst wenn die relevanten Informationen nicht kommuniziert werden.
