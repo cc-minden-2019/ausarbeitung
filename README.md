@@ -18,7 +18,7 @@ Grundgedanke ist aktuell, jeder Domäne eine eigene UI implementieren zu lassen,
 
 Task | Artefakt | Link | Erarbeitet von
 -- | -- | -- | --
-Spezifikation Use Case-Sicht | Use-Cases als Satzschablonen | [/spezifikation/anforderungsalanyse/usecases.md](/spezifikation/anforderungsalanyse/usecases.md) | Gesamte Gruppe
+Spezifikation Use Case-Sicht | Use-Cases als Satzschablonen | [/spezifikation/anforderungsanalyse/usecases.md](/spezifikation/anforderungsalanyse/usecases.md) | Gesamte Gruppe
 Spezifikation Implementierungs-Sicht | Grobe Übersicht über nötige Services [1] | [/spezifikation/services.md](/spezifikation/services.md) | Gesamte Gruppe
 Spezifikation Implementierungs-Sicht | Komponentendiagramm | [/spezifikation/uml_komponenten.svg](/spezifikation/uml_komponenten.svg) | Luca Berneking
 Spezifikation Prozess-Sicht | Diverse Sequenz-Diagramme + Aktivitätsdiagramm | [/spezifikation/prozess-sicht/](/spezifikation/prozess-sicht/) | Leon Brandt
@@ -38,3 +38,5 @@ Spezifikation Bestell-Service | UI-Mockup + Datenmodell | Luca Berneking
 Spezifikation Nicht-Funkationaler Anforderungen | | Gesamte Gruppe
 Technologiefestlegungen (Event-Bus, Schnittstellen) | | Gesamte Gruppe
 "Protokoll"-Spezifikation (Format Messages auf Eventbus, etc.) | | Gesamte Gruppe
+
+Eine Übersicht zum aktuellen Stand findet sich im [Kanban-Board des Spezifikations-Projekts](https://github.com/orgs/cc-minden-2019/projects/1)
