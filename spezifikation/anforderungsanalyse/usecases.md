@@ -9,7 +9,7 @@
 - Als **Kunde** möchte ich **den Lieferstatus meiner Bestellung erhalten**, damit ich **genau weiß, wann die Bestellung eintrifft**
 - Als **Koch** möchte ich **Gerichte abarbeiten**, damit ich **effizient nach Pull-Prinzip arbeiten kann**
 - Als **Koch** möchte ich **die richtigen Gerichte zugeordnet bekommen**, damit ich **Gerichte meinem Arbeitsplatz entsprechend zubereiten kann**
-- Als **Kellner* möchte ich **zubereitete Gerichte am richtigen Tisch servieren**, damit ich **effizient nach Pull-Prinzip arbeiten kann**
+- Als **Kellner** möchte ich **zubereitete Gerichte am richtigen Tisch servieren**, damit ich **effizient nach Pull-Prinzip arbeiten kann**
 - Als **Lieferant** möchte ich **Aufträge erhalten**, damit ich **effizient nach Pull-Prinzip arbeiten kann**
 
 *Gemeinsam als Gruppe am 07.11.2019 erarbeitet*
