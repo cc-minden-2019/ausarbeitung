@@ -4,10 +4,12 @@
 
 - [Use-Case-Satzschablonen](anforderungsanalyse/usecases.md)
 - [UI-Mockup: Tracking-Service](mockups/tracking/tracking.png)
+- [UI-Mockup: Bestellung](mockups/bestellung/bestellung.png)
 
 ## Logische Sicht
 
 - [Klassendiagramm: Tracking-Service](modelle/tracking/classdiagram.svg)
+- [Klassendiagramm: Bestellung-Service](modelle/bestellung/data.svg)
 
 ## Implementierungssicht
 
