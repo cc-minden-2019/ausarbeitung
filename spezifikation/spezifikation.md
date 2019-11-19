@@ -4,10 +4,13 @@
 
 - [Use-Case-Satzschablonen](anforderungsanalyse/usecases.md)
 - [UI-Mockup: Tracking-Service](mockups/tracking/tracking.png)
+- [UI-Mockup: Storage-Service - Without filter options](mockups/storage/App.png)
+- [UI-Mockup: Storage-Service - With filter dropdown](mockups/storage/Filter.png)
 
 ## Logische Sicht
 
 - [Klassendiagramm: Tracking-Service](modelle/tracking/classdiagram.svg)
+- [Klassendiagramm: Storage-Service](modelle/storage/model.png)
 
 ## Implementierungssicht
 
