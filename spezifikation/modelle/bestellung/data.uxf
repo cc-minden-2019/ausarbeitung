@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>294</y>
+      <w>294</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+type: String
+dishes: Dish[]
+table: Integer?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1232</x>
+      <y>294</y>
+      <w>294</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Dish
+--
+id: uuid
+number: Integer
+name: String
+price: Integer
+currency: String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>728</y>
+      <w>294</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+uuid: uuid
+last_name: String
+first_name: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>728</y>
+      <w>294</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Address
+--
+line_1: String
+line_2: String
+line_3: String
+zip: Number
+city: String
+country: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>378</y>
+      <w>266</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1...n</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>546</y>
+      <w>224</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0/1</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;60.0;10.0;60.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>546</y>
+      <w>252</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0/1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;140.0;60.0;140.0;130.0</additional_attributes>
+  </element>
+</diagram>
