@@ -24,9 +24,6 @@ Spezifikation Implementierungs-Sicht | Komponentendiagramm | [/spezifikation/uml
 Spezifikation Prozess-Sicht | Diverse Sequenz-Diagramme + Aktivitätsdiagramm | [/spezifikation/prozess-sicht/](/spezifikation/prozess-sicht/) | Leon Brandt
 Spezifikation Tracking-Service | UI-Mockup | [/spezifikation/mockups/tracking/](/spezifikation/mockups/tracking/) | Leon Brandt
 Spezifikation Tracking-Service | Internes Datenmodell (Klassendiagramm) |  [/spezifikation/modelle/tracking/](/spezifikation/modelle/tracking/) | Leon Brandt
-Spezifikation Physische Sicht | Verteilungsdiagramm | [/spezifikation/physische-sicht/uml_distribution_graph.svg](/spezifikation/physische-sicht/uml_distribution_graph.svg) | Ken Madlehn
-Spezifikation Küchen-Service | UI-Mockup | [/spezifikation/mockups/kitchen/](/spezifikation/mockups/kitchen/) | Ken Madlehn
-Spezifikation Küchen-Service | Datenmodell | [/spezifikation/modelle/kitchen/](/spezifikation/modelle/kitchen/) | Ken Madlehn
 
 [1] Die Service-Übersicht enthält eine erste Aufteilung über die Verantwortlichkeit der Gruppenmitglieder über die Services inklusive einer ersten Technologiefestlegung.
 
@@ -34,6 +31,8 @@ Spezifikation Küchen-Service | Datenmodell | [/spezifikation/modelle/kitchen/](
 
 Task | Artefakt | Zu erarbeiten von
 -- | -- | --
+Spezifikation Physische Sicht | Verteilungsdiagramm | Ken Madlehn
+Spezifikation Küchen-Service | UI-Mockup + Datenmodell | Ken Madlehn
 Spezifikation Lager-Service | UI-Mockup + Datenmodell | Justin Drögemeier
 Spezifikation Bestell-Service | UI-Mockup + Datenmodell | Luca Berneking
 Spezifikation Nicht-Funkationaler Anforderungen | | Gesamte Gruppe
