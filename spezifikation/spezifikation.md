@@ -18,7 +18,7 @@
 
 ## Physische Sicht
 
-- [Verteilungsdiagramm](physische-sicht/Verteilungsdiagramm.pdf)
+- [Verteilungsdiagramm](physische-sicht/uml_distribution_graph.svg)
 
 ## Prozesssicht
 
