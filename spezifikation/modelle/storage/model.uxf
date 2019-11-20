@@ -1,0 +1,10 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>498</x><y>280</y><w>130</w><h>140</h></coordinates><panel_attributes>Ingredient
+--
+id: uuid
+category: String
+name: String
+amount: Integer
+reservations: Integer
+unit: String
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
