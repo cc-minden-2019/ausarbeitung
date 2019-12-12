@@ -2,7 +2,7 @@
 
 ## [Spezifikation auf Github Pages](https://cc-minden-2019.github.io/spezifikation)
 
-## <s>Gitlab-Repositories (Implementierung)</s> // TODO
+## [Gitlab-Repositories (Implementierung)](https://gitlab.micronited.de/cc)
 
 ---
 
