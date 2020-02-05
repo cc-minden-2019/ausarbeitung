@@ -4,7 +4,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>520</x>
+      <x>400</x>
       <y>544</y>
       <w>160</w>
       <h>80</h>
@@ -17,7 +17,7 @@ Buchungs-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>512</x>
+      <x>392</x>
       <y>904</y>
       <w>160</w>
       <h>80</h>
@@ -30,7 +30,7 @@ Login-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>520</x>
+      <x>400</x>
       <y>248</y>
       <w>160</w>
       <h>80</h>
@@ -42,7 +42,7 @@ Menü-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>832</x>
+      <x>712</x>
       <y>600</y>
       <w>160</w>
       <h>80</h>
@@ -55,7 +55,7 @@ Servier-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>520</x>
+      <x>400</x>
       <y>424</y>
       <w>160</w>
       <h>80</h>
@@ -67,7 +67,7 @@ Bestell-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>832</x>
+      <x>712</x>
       <y>480</y>
       <w>160</w>
       <h>80</h>
@@ -79,7 +79,7 @@ Küchen-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>832</x>
+      <x>712</x>
       <y>1088</y>
       <w>160</w>
       <h>80</h>
@@ -91,7 +91,7 @@ Tracking-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>832</x>
+      <x>712</x>
       <y>864</y>
       <w>160</w>
       <h>80</h>
@@ -104,7 +104,7 @@ Liefer-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>832</x>
+      <x>712</x>
       <y>736</y>
       <w>160</w>
       <h>80</h>
@@ -117,7 +117,7 @@ Bezahlungs-Service</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>776</x>
+      <x>656</x>
       <y>248</y>
       <w>160</w>
       <h>80</h>
@@ -129,7 +129,7 @@ Lager-Service</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
+      <x>344</x>
       <y>456</y>
       <w>72</w>
       <h>24</h>
@@ -140,7 +140,7 @@ Lager-Service</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>600</x>
       <y>296</y>
       <w>72</w>
       <h>24</h>
@@ -151,7 +151,7 @@ Lager-Service</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
+      <x>552</x>
       <y>288</y>
       <w>64</w>
       <h>40</h>
@@ -162,7 +162,7 @@ Lager-Service</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
+      <x>472</x>
       <y>320</y>
       <w>24</w>
       <h>64</h>
@@ -173,7 +173,7 @@ Lager-Service</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
+      <x>464</x>
       <y>368</y>
       <w>40</w>
       <h>72</h>
@@ -184,7 +184,7 @@ Lager-Service</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
+      <x>600</x>
       <y>408</y>
       <w>72</w>
       <h>760</h>
@@ -197,7 +197,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
+      <x>552</x>
       <y>456</y>
       <w>64</w>
       <h>24</h>
@@ -208,7 +208,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>496</y>
       <w>64</w>
       <h>24</h>
@@ -219,7 +219,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>520</y>
       <w>64</w>
       <h>24</h>
@@ -230,7 +230,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>640</y>
       <w>64</w>
       <h>24</h>
@@ -241,7 +241,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>616</y>
       <w>64</w>
       <h>24</h>
@@ -252,7 +252,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>776</y>
       <w>64</w>
       <h>24</h>
@@ -263,7 +263,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>752</y>
       <w>64</w>
       <h>24</h>
@@ -274,7 +274,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>904</y>
       <w>64</w>
       <h>24</h>
@@ -285,7 +285,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>880</y>
       <w>64</w>
       <h>24</h>
@@ -296,7 +296,7 @@ bg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>320</y>
       <w>136</w>
       <h>144</h>
@@ -307,7 +307,7 @@ bg=blue
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1096</x>
+      <x>976</x>
       <y>480</y>
       <w>160</w>
       <h>80</h>
@@ -319,7 +319,7 @@ Küchen-UI</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1096</x>
+      <x>976</x>
       <y>600</y>
       <w>160</w>
       <h>80</h>
@@ -332,7 +332,7 @@ Kellner-UI</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1096</x>
+      <x>976</x>
       <y>1088</y>
       <w>160</w>
       <h>80</h>
@@ -344,7 +344,7 @@ Tracking-UI</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1096</x>
+      <x>976</x>
       <y>864</y>
       <w>160</w>
       <h>80</h>
@@ -357,7 +357,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1032</x>
+      <x>912</x>
       <y>888</y>
       <w>80</w>
       <h>40</h>
@@ -368,7 +368,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
+      <x>864</x>
       <y>896</y>
       <w>64</w>
       <h>24</h>
@@ -379,7 +379,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
+      <x>864</x>
       <y>512</y>
       <w>64</w>
       <h>24</h>
@@ -390,7 +390,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1032</x>
+      <x>912</x>
       <y>504</y>
       <w>80</w>
       <h>40</h>
@@ -401,7 +401,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
+      <x>864</x>
       <y>1120</y>
       <w>64</w>
       <h>24</h>
@@ -412,7 +412,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1032</x>
+      <x>912</x>
       <y>1112</y>
       <w>80</w>
       <h>40</h>
@@ -423,7 +423,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
+      <x>864</x>
       <y>632</y>
       <w>64</w>
       <h>24</h>
@@ -434,7 +434,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1032</x>
+      <x>912</x>
       <y>624</y>
       <w>80</w>
       <h>40</h>
@@ -445,7 +445,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
+      <x>864</x>
       <y>752</y>
       <w>64</w>
       <h>24</h>
@@ -456,7 +456,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1032</x>
+      <x>912</x>
       <y>656</y>
       <w>80</w>
       <h>128</h>
@@ -467,7 +467,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
+      <x>272</x>
       <y>448</y>
       <w>88</w>
       <h>72</h>
@@ -478,7 +478,7 @@ Liefer-UI</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>240</x>
+      <x>120</x>
       <y>488</y>
       <w>160</w>
       <h>80</h>
@@ -490,7 +490,7 @@ Kunden-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
+      <x>336</x>
       <y>936</y>
       <w>72</w>
       <h>24</h>
@@ -501,7 +501,7 @@ Kunden-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
+      <x>344</x>
       <y>576</y>
       <w>72</w>
       <h>24</h>
@@ -512,7 +512,7 @@ Kunden-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
+      <x>272</x>
       <y>544</y>
       <w>88</w>
       <h>64</h>
@@ -523,7 +523,7 @@ Kunden-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
+      <x>864</x>
       <y>784</y>
       <w>64</w>
       <h>24</h>
@@ -534,7 +534,7 @@ Kunden-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1032</x>
+      <x>912</x>
       <y>776</y>
       <w>80</w>
       <h>120</h>
@@ -545,7 +545,7 @@ Kunden-UI</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>240</x>
+      <x>120</x>
       <y>904</y>
       <w>160</w>
       <h>80</h>
@@ -558,7 +558,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
+      <x>272</x>
       <y>928</y>
       <w>80</w>
       <h>40</h>
@@ -569,7 +569,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
+      <x>464</x>
       <y>848</y>
       <w>24</w>
       <h>72</h>
@@ -580,7 +580,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>1136</y>
       <w>64</w>
       <h>24</h>
@@ -591,7 +591,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>664</x>
       <y>1112</y>
       <w>64</w>
       <h>24</h>
@@ -602,7 +602,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
+      <x>192</x>
       <y>272</y>
       <w>168</w>
       <h>232</h>
@@ -613,7 +613,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
+      <x>344</x>
       <y>280</y>
       <w>72</w>
       <h>24</h>
@@ -624,7 +624,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
+      <x>552</x>
       <y>264</y>
       <w>64</w>
       <h>24</h>
@@ -635,7 +635,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>600</x>
       <y>256</y>
       <w>72</w>
       <h>40</h>
@@ -646,7 +646,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>712</x>
+      <x>592</x>
       <y>240</y>
       <w>40</w>
       <h>24</h>
@@ -657,7 +657,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>712</x>
+      <x>592</x>
       <y>312</y>
       <w>40</w>
       <h>24</h>
@@ -668,7 +668,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>456</x>
+      <x>336</x>
       <y>296</y>
       <w>40</w>
       <h>24</h>
@@ -679,7 +679,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>456</x>
+      <x>336</x>
       <y>472</y>
       <w>40</w>
       <h>24</h>
@@ -690,7 +690,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>456</x>
+      <x>336</x>
       <y>592</y>
       <w>40</w>
       <h>24</h>
@@ -701,7 +701,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>448</x>
+      <x>328</x>
       <y>952</y>
       <w>40</w>
       <h>24</h>
@@ -712,7 +712,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>600</x>
+      <x>480</x>
       <y>848</y>
       <w>40</w>
       <h>24</h>
@@ -723,7 +723,7 @@ Login-UI</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1008</x>
+      <x>888</x>
       <y>1136</y>
       <w>72</w>
       <h>40</h>
@@ -735,7 +735,7 @@ WebSocket</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1016</x>
+      <x>896</x>
       <y>912</y>
       <w>40</w>
       <h>24</h>
@@ -746,7 +746,7 @@ WebSocket</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1016</x>
+      <x>896</x>
       <y>800</y>
       <w>40</w>
       <h>24</h>
@@ -757,7 +757,7 @@ WebSocket</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1016</x>
+      <x>896</x>
       <y>736</y>
       <w>40</w>
       <h>24</h>
@@ -768,7 +768,7 @@ WebSocket</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1016</x>
+      <x>896</x>
       <y>648</y>
       <w>40</w>
       <h>24</h>
@@ -779,8 +779,19 @@ WebSocket</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1016</x>
+      <x>896</x>
       <y>528</y>
+      <w>40</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>REST</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>488</x>
+      <y>360</y>
       <w>40</w>
       <h>24</h>
     </coordinates>
